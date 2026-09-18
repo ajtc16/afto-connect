@@ -1,0 +1,35 @@
+# AFTO Connect — local Supabase config (used by `npx supabase start`).
+project_id = "afto-connect"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+
+# Logflare analytics is heavy and non-essential for local dev; disabling it
+# avoids health-check timeouts on the vector/analytics/studio containers.
+[analytics]
+enabled = false
+
+[auth]
+enabled = true
+# Local dev site URL for magic-link redirects.
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]
+jwt_expiry = 3600
+enable_signup = true
+
+[auth.email]
+enable_signup = true
+# Local dev: magic links are captured by Inbucket (no real email sent).
+enable_confirmations = false

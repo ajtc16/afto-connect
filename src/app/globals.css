@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   AFTO Connect — design tokens
+   Brand direction: dark charcoal / navy surfaces, electric-blue highlights,
+   light text, subtle borders, premium and slightly futuristic.
+   ========================================================================== */
+
+@theme {
+  /* Brand palette */
+  --color-bg: #090d15;
+  --color-surface: #111826;
+  --color-surface-2: #17202f;
+  --color-border: #22304a;
+  --color-border-strong: #2f4a73;
+
+  --color-primary: #2e90fa;
+  --color-primary-hover: #1b7fe8;
+  --color-primary-soft: #123256;
+
+  --color-foreground: #f4f7fb;
+  --color-muted: #93a2b8;
+  --color-muted-2: #64748b;
+
+  --color-whatsapp: #25d366;
+  --color-linkedin: #0a66c2;
+
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+
+  /* Radii */
+  --radius-card: 16px;
+  --radius-btn: 12px;
+
+  /* Fonts (wired via next/font in layout.tsx) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-inter), sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle radial glow used on the public profile + landing hero. */
+.afto-aurora {
+  background:
+    radial-gradient(60% 50% at 50% -10%, rgba(46, 144, 250, 0.18), transparent 70%),
+    radial-gradient(40% 40% at 100% 0%, rgba(46, 144, 250, 0.08), transparent 60%);
+}
+
+/* Focus ring shared across interactive elements for accessibility. */
+.afto-focus:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
