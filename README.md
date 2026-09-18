@@ -8,7 +8,7 @@ interacción y (en el plan AI) conversa con tus visitantes.
 
 Construido como SaaS multi-tenant desde el primer día: Personal · Pro · AI ·
 Business.
-
+ 
 ---
 
 ## Stack
