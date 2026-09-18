@@ -82,7 +82,7 @@ async function main() {
         email: "ateran@afto.dev",
         website: "https://afto.dev",
         whatsapp: "+593998732486",
-        linkedin: "https://www.linkedin.com/in/antonioteran",
+        linkedin: "https://www.linkedin.com/in/antonio-teran",
         theme: { primary_color: "#2e90fa" },
       },
       { onConflict: "slug" }
